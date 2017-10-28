@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('../../fonts/GothamRounded-Medium.eot');
-  src: url('../../fonts/GothamRounded-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/GothamRounded-Medium.woff2') format('woff2'),
-  url('../../fonts/GothamRounded-Medium.woff') format('woff'),
-  url('../../fonts/GothamRounded-Medium.ttf') format('truetype'),
-  url('../../fonts/GothamRounded-Medium.otf') format('opentype'),
-  url('../../fonts/GothamRounded-Medium.svg#GothamRounded-Medium') format('svg');
+  src: url($fontsPath + 'GothamRounded-Medium.eot');
+  src: url($fontsPath + 'GothamRounded-Medium.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'GothamRounded-Medium.woff2') format('woff2'),
+  url($fontsPath + 'GothamRounded-Medium.woff') format('woff'),
+  url($fontsPath + 'GothamRounded-Medium.ttf') format('truetype'),
+  url($fontsPath + 'GothamRounded-Medium.otf') format('opentype'),
+  url($fontsPath + 'GothamRounded-Medium.svg#GothamRounded-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -19,13 +19,13 @@
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('../../fonts/GothamRounded-Book.eot');
-  src: url('../../fonts/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/GothamRounded-Book.woff2') format('woff2'),
-  url('../../fonts/GothamRounded-Book.woff') format('woff'),
-  url('../../fonts/GothamRounded-Book.ttf') format('truetype'),
-  url('../../fonts/GothamRounded-Book.otf') format('opentype'),
-  url('../../fonts/GothamRounded-Book.svg#GothamRounded-Book') format('svg');
+  src: url($fontsPath + 'GothamRounded-Book.eot');
+  src: url($fontsPath + 'GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'GothamRounded-Book.woff2') format('woff2'),
+  url($fontsPath + 'GothamRounded-Book.woff') format('woff'),
+  url($fontsPath + 'GothamRounded-Book.ttf') format('truetype'),
+  url($fontsPath + 'GothamRounded-Book.otf') format('opentype'),
+  url($fontsPath + 'GothamRounded-Book.svg#GothamRounded-Book') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -36,13 +36,13 @@
 
 @font-face {
   font-family: 'Gotham Rounded';
-  src: url('../../fonts/GothamRounded-Light.eot');
-  src: url('../../fonts/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/GothamRounded-Light.woff2') format('woff2'),
-  url('../../fonts/GothamRounded-Light.woff') format('woff'),
-  url('../../fonts/GothamRounded-Light.ttf') format('truetype'),
-  url('../../fonts/GothamRounded-Light.otf') format('opentype'),
-  url('../../fonts/GothamRounded-Light.svg#GothamRounded-Light') format('svg');
+  src: url($fontsPath + 'GothamRounded-Light.eot');
+  src: url($fontsPath + 'GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'GothamRounded-Light.woff2') format('woff2'),
+  url($fontsPath + 'GothamRounded-Light.woff') format('woff'),
+  url($fontsPath + 'GothamRounded-Light.ttf') format('truetype'),
+  url($fontsPath + 'GothamRounded-Light.otf') format('opentype'),
+  url($fontsPath + 'GothamRounded-Light.svg#GothamRounded-Light') format('svg');
   font-weight: 200;
   font-style: normal;
   font-stretch: normal;
@@ -53,13 +53,13 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../../fonts/Gotham-Black.eot');
-  src: url('../../fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Gotham-Black.woff2') format('woff2'),
-  url('../../fonts/Gotham-Black.woff') format('woff'),
-  url('../../fonts/Gotham-Black.ttf') format('truetype'),
-  url('../../fonts/Gotham-Black.otf') format('opentype'),
-  url('../../fonts/Gotham-Black.svg#Gotham-Black') format('svg');
+  src: url($fontsPath + 'Gotham-Black.eot');
+  src: url($fontsPath + 'Gotham-Black.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Gotham-Black.woff2') format('woff2'),
+  url($fontsPath + 'Gotham-Black.woff') format('woff'),
+  url($fontsPath + 'Gotham-Black.ttf') format('truetype'),
+  url($fontsPath + 'Gotham-Black.otf') format('opentype'),
+  url($fontsPath + 'Gotham-Black.svg#Gotham-Black') format('svg');
   font-weight: 800;
   font-style: normal;
   font-stretch: normal;
@@ -70,13 +70,13 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../../fonts/Gotham-Bold.eot');
-  src: url('../../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Gotham-Bold.woff2') format('woff2'),
-  url('../../fonts/Gotham-Bold.woff') format('woff'),
-  url('../../fonts/Gotham-Bold.ttf') format('truetype'),
-  url('../../fonts/Gotham-Bold.otf') format('opentype'),
-  url('../../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+  src: url($fontsPath + 'Gotham-Bold.eot');
+  src: url($fontsPath + 'Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Gotham-Bold.woff2') format('woff2'),
+  url($fontsPath + 'Gotham-Bold.woff') format('woff'),
+  url($fontsPath + 'Gotham-Bold.ttf') format('truetype'),
+  url($fontsPath + 'Gotham-Bold.otf') format('opentype'),
+  url($fontsPath + 'Gotham-Bold.svg#Gotham-Bold') format('svg');
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -87,13 +87,13 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../../fonts/Gotham-Medium.eot');
-  src: url('../../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Gotham-Medium.woff2') format('woff2'),
-  url('../../fonts/Gotham-Medium.woff') format('woff'),
-  url('../../fonts/Gotham-Medium.ttf') format('truetype'),
-  url('../../fonts/Gotham-Medium.otf') format('opentype'),
-  url('../../fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
+  src: url($fontsPath + 'Gotham-Medium.eot');
+  src: url($fontsPath + 'Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Gotham-Medium.woff2') format('woff2'),
+  url($fontsPath + 'Gotham-Medium.woff') format('woff'),
+  url($fontsPath + 'Gotham-Medium.ttf') format('truetype'),
+  url($fontsPath + 'Gotham-Medium.otf') format('opentype'),
+  url($fontsPath + 'Gotham-Medium.svg#Gotham-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -104,13 +104,13 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('../../fonts/Gotham-Book.eot');
-  src: url('../../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Gotham-Book.woff2') format('woff2'),
-  url('../../fonts/Gotham-Book.woff') format('woff'),
-  url('../../fonts/Gotham-Book.ttf') format('truetype'),
-  url('../../fonts/Gotham-Book.otf') format('opentype'),
-  url('../../fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+  src: url($fontsPath + 'Gotham-Book.eot');
+  src: url($fontsPath + 'Gotham-Book.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Gotham-Book.woff2') format('woff2'),
+  url($fontsPath + 'Gotham-Book.woff') format('woff'),
+  url($fontsPath + 'Gotham-Book.ttf') format('truetype'),
+  url($fontsPath + 'Gotham-Book.otf') format('opentype'),
+  url($fontsPath + 'Gotham-Book.svg#Gotham-Book') format('svg');
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -121,13 +121,13 @@
 
 @font-face {
   font-family: 'Georgia';
-  src: url('../../fonts/Georgia.eot');
-  src: url('../../fonts/Georgia.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Georgia.woff2') format('woff2'),
-  url('../../fonts/Georgia.woff') format('woff'),
-  url('../../fonts/Georgia.ttf') format('truetype'),
-  url('../../fonts/Georgia.otf') format('opentype'),
-  url('../../fonts/Georgia.svg#Georgia') format('svg');
+  src: url($fontsPath + 'Georgia.eot');
+  src: url($fontsPath + 'Georgia.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Georgia.woff2') format('woff2'),
+  url($fontsPath + 'Georgia.woff') format('woff'),
+  url($fontsPath + 'Georgia.ttf') format('truetype'),
+  url($fontsPath + 'Georgia.otf') format('opentype'),
+  url($fontsPath + 'Georgia.svg#Georgia') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -138,13 +138,13 @@
 
 @font-face {
   font-family: 'Garamond';
-  src: url('../../fonts/Garamond Regular.eot');
-  src: url('../../fonts/Garamond Regular.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Garamond Regular.woff2') format('woff2'),
-  url('../../fonts/Garamond Regular.woff') format('woff'),
-  url('../../fonts/Garamond Regular.ttf') format('truetype'),
-  url('../../fonts/Garamond Regular.otf') format('opentype'),
-  url('../../fonts/Garamond Regular.svg#Garamond Regular') format('svg');
+  src: url($fontsPath + 'Garamond Regular.eot');
+  src: url($fontsPath + 'Garamond Regular.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Garamond Regular.woff2') format('woff2'),
+  url($fontsPath + 'Garamond Regular.woff') format('woff'),
+  url($fontsPath + 'Garamond Regular.ttf') format('truetype'),
+  url($fontsPath + 'Garamond Regular.otf') format('opentype'),
+  url($fontsPath + 'Garamond Regular.svg#Garamond Regular') format('svg');
   font-weight: 400;
   font-style: italic;
   font-stretch: normal;
@@ -155,13 +155,13 @@
 
 @font-face {
   font-family: 'Didot';
-  src: url('../../fonts/Didot.eot');
-  src: url('../../fonts/Didot.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Didot.woff2') format('woff2'),
-  url('../../fonts/Didot.woff') format('woff'),
-  url('../../fonts/Didot.ttf') format('truetype'),
-  url('../../fonts/Didot.otf') format('opentype'),
-  url('../../fonts/Didot.svg#Didot') format('svg');
+  src: url($fontsPath + 'Didot.eot');
+  src: url($fontsPath + 'Didot.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'Didot.woff2') format('woff2'),
+  url($fontsPath + 'Didot.woff') format('woff'),
+  url($fontsPath + 'Didot.ttf') format('truetype'),
+  url($fontsPath + 'Didot.otf') format('opentype'),
+  url($fontsPath + 'Didot.svg#Didot') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -172,13 +172,13 @@
 
 @font-face {
   font-family: 'Didot LT Std';
-  src: url('../../fonts/DidotLTStd-Bold.eot');
-  src: url('../../fonts/DidotLTStd-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/DidotLTStd-Bold.woff2') format('woff2'),
-  url('../../fonts/DidotLTStd-Bold.woff') format('woff'),
-  url('../../fonts/DidotLTStd-Bold.ttf') format('truetype'),
-  url('../../fonts/DidotLTStd-Bold.otf') format('opentype'),
-  url('../../fonts/DidotLTStd-Bold.svg#DidotLTStd-Bold') format('svg');
+  src: url($fontsPath + 'DidotLTStd-Bold.eot');
+  src: url($fontsPath + 'DidotLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'DidotLTStd-Bold.woff2') format('woff2'),
+  url($fontsPath + 'DidotLTStd-Bold.woff') format('woff'),
+  url($fontsPath + 'DidotLTStd-Bold.ttf') format('truetype'),
+  url($fontsPath + 'DidotLTStd-Bold.otf') format('opentype'),
+  url($fontsPath + 'DidotLTStd-Bold.svg#DidotLTStd-Bold') format('svg');
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -187,13 +187,13 @@
 
 @font-face {
   font-family: 'Didot LT Std';
-  src: url('../../fonts/DidotLTStd-Roman.eot');
-  src: url('../../fonts/DidotLTStd-Roman.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/DidotLTStd-Roman.woff2') format('woff2'),
-  url('../../fonts/DidotLTStd-Roman.woff') format('woff'),
-  url('../../fonts/DidotLTStd-Roman.ttf') format('truetype'),
-  url('../../fonts/DidotLTStd-Roman.otf') format('opentype'),
-  url('../../fonts/DidotLTStd-Roman.svg#DidotLTStd-Roman') format('svg');
+  src: url($fontsPath + 'DidotLTStd-Roman.eot');
+  src: url($fontsPath + 'DidotLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+  url($fontsPath + 'DidotLTStd-Roman.woff2') format('woff2'),
+  url($fontsPath + 'DidotLTStd-Roman.woff') format('woff'),
+  url($fontsPath + 'DidotLTStd-Roman.ttf') format('truetype'),
+  url($fontsPath + 'DidotLTStd-Roman.otf') format('opentype'),
+  url($fontsPath + 'DidotLTStd-Roman.svg#DidotLTStd-Roman') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;

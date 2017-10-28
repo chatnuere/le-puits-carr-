@@ -1,6 +1,6 @@
 .top_section {
   min-height: 100vh;
-  background: url("../../imgs/content/home--full.jpg");
+  background: url($imgsPath + "home--full.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
