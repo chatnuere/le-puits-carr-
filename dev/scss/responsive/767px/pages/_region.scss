@@ -1,0 +1,13 @@
+.regionSlider--item--image {
+  width: 100%;
+  height: em(200px);
+  position: relative;
+}
+
+.regionSlider--item--content {
+  padding: em(20px) em(40px);
+
+  h3 {
+    font-size: em(28px);
+  }
+}

@@ -1,0 +1,61 @@
+.welcome {
+  background-color: $brown;
+  color: #fff;
+  padding: 2em 0;
+
+}
+
+.welcome__title {
+  font-size: em(45px);
+  font-family: $gotham;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: +3px;
+  margin: 0;
+}
+
+.rooms__wrapper {
+  padding: em(70px) 0;
+}
+
+.discover {
+  background: url("../../imgs/content/discover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.discover__text-wrapper {
+  background-color: $gold;
+  color: #fff;
+  padding: em(70px) em(30px);
+  overflow: hidden;
+}
+
+.discover__title {
+  text-transform: uppercase;
+  font-size: em(26px);
+  margin: 0 0 em(30px);
+}
+
+.discover__title-featured {
+  display: block;
+  font-family: $didot;
+  font-size: em(68px, 26px);
+}
+
+.discover__text-content {
+  font-weight: 300;
+  font-size: em(14px);
+margin-bottom: em(40px, 14px);
+  p {
+    font-family: $gothamRounded;
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.btn-discover {
+font-size: em(14px);
+}

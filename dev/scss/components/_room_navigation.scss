@@ -1,0 +1,78 @@
+.roomNavigation {
+  background-color: $gray;
+  padding: em(50px) 0;
+}
+
+.roomNavigation--btn {
+  display: inline-block;
+  background-color: $green;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: em(21px);
+  font-family: $garamond;
+  padding: em(10px, 21px) 0;
+
+  i, span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    margin-top: em(4px, 21px);
+  }
+
+  &.roomNavigation--btn-right {
+    padding-left: em(30px, 21px);
+    background-color: $purple;
+    &:hover {
+      background-color: lighten($purple, 10%);
+    }
+  }
+
+
+  &.roomNavigation--btn-left {
+    padding-right: em(30px, 21px);
+
+    background-color: $green;
+    &:hover {
+      background-color: lighten($green, 10%);
+    }
+  }
+
+  &.roomNavigation--btn-puits {
+    padding-left: em(30px, 21px);
+    background-color: $purple;
+    &:hover {
+      background-color: lighten($purple, 10%);
+    }
+  }
+
+  &.roomNavigation--btn-house {
+    padding-right: em(30px, 21px);
+
+    background-color: $green;
+    &:hover {
+      background-color: lighten($green, 10%);
+    }
+  }
+
+  &.roomNavigation--btn--voutes {
+    padding-right: em(30px, 21px);
+
+    background-color: $grey;
+    &:hover {
+      background-color: lighten($grey, 10%);
+    }
+  }
+
+
+
+  transition: background-color 0.3s ease-out;
+}
+
+.roomNavigation--btn-arrow {
+  &:before {
+    font-size: 3em;
+  }
+}

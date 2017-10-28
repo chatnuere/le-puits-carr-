@@ -1,0 +1,20 @@
+.blockquote {
+  background-color: $green;
+  padding: em(60px);
+  color: #fff;
+  font-family: $didot;
+}
+
+.blockquote--text, .blockquote--author {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blockquote--text {
+  font-size: em(30px);
+  margin-bottom: em(40px, 30px);
+}
+
+.blockquote--author {
+  font-size: em(21px);
+}

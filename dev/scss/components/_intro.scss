@@ -1,0 +1,53 @@
+.intro--title, .intro--text {
+  background-color: $grey;
+  color: #fff;
+}
+
+.intro--title {
+  margin: em(-115px, 34px) 0 0;
+  font-size: em(34px);
+  text-transform: uppercase;
+  letter-spacing: +2px;
+  padding: em(40px, 34px) em(15px, 34px) 0;
+}
+
+.intro--text {
+  font-size: em(18px, 16px);
+  padding: em(40px, 18px) 0;
+  font-family: $garamond;
+  a {
+    color: $red;
+  }
+  > .container--small {
+    max-width: em(750px, 18px);
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.intro--region {
+  .intro--title, .intro--text {
+    background-color: $gold;
+    color: #fff;
+  }
+}
+
+.intro--house {
+  .intro--title, .intro--text {
+    background-color: $green;
+    color: #fff;
+  }
+}
+
+.intro--contact {
+  .intro--title, .intro--text {
+    background-color: $blue;
+    color: #fff;
+  }
+}

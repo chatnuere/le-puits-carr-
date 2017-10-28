@@ -1,0 +1,85 @@
+
+
+/* Main wrapper for grid */
+.col-group {
+  font-family: monospace; /* for spacing columns correctly */
+  letter-spacing: -.65em; /* this too */
+  margin-left: -1em;
+  margin-right: -1em;
+  text-align: left; /* center or justify for columns in last row */
+  display: block;
+
+  &.col-group-center {
+    text-align: center;
+  }
+  &.col-group-right {
+    text-align: right;
+  }
+
+  &.col-group-middle {
+    .col {
+      vertical-align: middle;
+    }
+  }
+}
+
+.col-group > .col-group {
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual columns */
+.col-group {
+  .col {
+    font-family: $baseFontStack; /* be sure to reset the font and letter-spacing */
+    letter-spacing: normal;
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+    float: none;
+    text-align: left;
+    vertical-align: top; /* align row's columns top or baseline */
+    box-sizing: border-box;
+    &.col-center {
+      text-align: center;
+    }
+
+    &.col-nogrid {
+      padding: 0;
+    }
+
+    &.col-right {
+      text-align: right;
+    }
+
+    &.col-bottom {
+      vertical-align: bottom;
+    }
+  }
+}
+.col-group.nogrid {
+  margin: 0;
+  .col {
+    padding: 0;
+  }
+}
+
+@include grid-build(1 2 3 4 6 12, '__xl');
+
+@media (max-width: $screen-l) {
+  @include grid-build(1 2 3 4 6 12, '__l');
+}
+
+@media (max-width: $screen-m) {
+  @include grid-build(1 2 3 4 6 12, '__m');
+}
+
+@media (max-width: $screen-s) {
+  @include grid-build(1 2 3 4 6 12, '__s');
+}
+
+@media (max-width: $screen-xs) {
+  @include grid-build(1 2 3 4 6 12, '__xs');
+}
+

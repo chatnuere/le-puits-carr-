@@ -1,0 +1,62 @@
+body {
+  font-size: $baseFontSize;
+  font-family: $baseFontStack;
+  font-weight: 300;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+  &.cant_move {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.container {
+  padding: 0 1em;
+  max-width: em(1200px);
+  margin: 0 auto;
+
+  &.container--small {
+    width: 90%;
+    max-width:  em(920px);
+    min-width:  em(300px);
+  }
+}
+
+p {
+  font-family: $garamond;
+  font-size: em(18px);
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $gotham;
+  font-weight: 700;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: em(26px);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 em(50px, 26px);
+  color: $blue;
+  letter-spacing: +2px;
+}
+
+.mobile__only {
+  display: none!important;
+}

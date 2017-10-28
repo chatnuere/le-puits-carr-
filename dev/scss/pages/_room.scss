@@ -1,0 +1,59 @@
+.prices {
+  padding: em(90px) 0;
+
+  .prices--item.prices--item-text {
+    text-align: left;
+  }
+}
+.prices--item {
+  margin-bottom: em(90px);
+}
+.prices--title {
+  font-size: em(65px);
+  font-family: $didot;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 em(30px, 65px);
+}
+
+.prices--text {
+  margin: 0;
+  font-size: em(14px);
+  font-family: $gothamRounded;
+  font-weight: 300;
+}
+
+.prices--heading {
+  display: inline-block;
+  width: 70%;
+  border-bottom: 1px solid;
+  padding-bottom: em(20px);
+  margin-bottom: em(30px);
+  h4 {
+    margin: 0;
+    font-family: $gotham;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: +2px;
+    font-size: em(14px);
+  }
+
+  i {
+    font-family: $georgia;
+    font-style: normal;
+    font-size: em(14px);
+  }
+}
+
+.prices--number {
+  font-family: $georgia;
+  font-size: em(75px);
+  font-weight: 300;
+  margin: 0;
+}
+
+.prices--currency {
+  font-size: em(31px, 75px);
+  display: inline-block;
+  margin-left: em(5px, 31px);
+}

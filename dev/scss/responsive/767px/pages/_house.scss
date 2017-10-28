@@ -1,0 +1,24 @@
+.blockquote--text {
+  font-size: em(22px);
+}
+
+.rooms__wrapper--house {
+  .room {
+    margin: 4em 0;
+    &.room-bigpicture {
+      .room__text-content {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.roomNavigation--btn {
+  font-size: 0.9em;
+  .roomNavigation--btn-arrow {
+    font-size: 0.5em;
+  }
+  span {
+    width: calc(100% - #{em(30px)});
+  }
+}

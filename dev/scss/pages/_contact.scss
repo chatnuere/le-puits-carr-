@@ -1,0 +1,127 @@
+.airbnb, .contact--infos {
+  padding: em(100px) 0;
+}
+
+.contact--infos {
+  background-color: $gray;
+  .sectionTitle {
+margin-bottom: em(20px);
+  }
+}
+
+.airbnb--content {
+  font-weight: em(14px);
+  margin-bottom: em(40px, 14px);
+  font-family: $gothamRounded;
+  font-weight: 300;
+
+  * {
+    font-family: $gothamRounded;
+    font-weight: 300;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.airbnb--icon {
+  &:before {
+    font-size: em(180px);
+    color: $red;
+  }
+}
+
+.contact--icon {
+  &:before {
+    font-size: em(30px);
+    color: $blue;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: em(3px);
+  }
+  display: block;
+  margin-bottom: em(30px);
+}
+
+
+.contact--infos-phoneWrapper {
+  margin-bottom: em(20px);
+  a {
+    font-size: em(30px);
+    display: inline-block;
+    font-family: $gothamRounded;
+    font-weight: 300;
+    text-decoration: none;
+    color: $grey;
+    transition: color 0.2s ease-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.contact--form {
+  padding: em(50px) 0 em(100px);
+}
+
+.material-form {
+  max-width: em(768px);
+  margin: 0 auto;
+}
+
+.btn--contact {
+  font-size: em(14px);
+}
+
+#map {
+  height: em(422px);
+  margin-bottom: em(100px);
+}
+
+#infoWindow {
+  position: relative;
+  padding: 30px 0;
+  color: #fff;
+  background-color: $blue;
+  width: 100%;
+  max-width: 250px;
+  p {
+    margin: 0 0 10px;
+    width: 100%;
+    font-family: $georgia;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 10px;
+  }
+}
+#firstHeading {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.infoWindow--content {
+  padding:0 30px 0  65px ;
+}
+
+.gm-style-iw:after {
+  position: absolute;
+  top: 50%;
+  left: 220px;
+  width: 0;
+  height: 0;
+  margin-top: -50px;
+  content: ' ';
+  pointer-events: none;
+  border: solid transparent;
+  border-width: 50px;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #3b4350;
+  z-index: -1;
+}

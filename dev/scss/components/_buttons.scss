@@ -1,0 +1,165 @@
+.btn {
+  display: inline-block;
+  outline: none;
+  border: 1px solid;
+  transition: color $defaultTransisionTime $defaultTransitionEase, border $defaultTransisionTime $defaultTransitionEase;
+  padding: em(22px) em(34px);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $gotham;
+  font-weight: 700;
+  &.btn__small {
+    padding: em(20px) em(24px);
+  }
+
+  &.btn__large {
+    padding: em(20px) em(54px);
+  }
+
+  &.btn__big {
+    padding: em(30px) em(54px);
+  }
+
+  &.btn__strong {
+    border: 2px solid;
+  }
+
+  &.btn__block {
+    display: block;
+  }
+  &.btn__brown {
+    background-color: $brown;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $brown;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $brown;
+      &:hover, &:active {
+        background-color: $brown;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__grey {
+    background-color: $grey;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $grey;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $grey;
+      &:hover, &:active {
+        background-color: $grey;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__gold {
+    background-color: $gold;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $gold;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $gold;
+      &:hover, &:active {
+        background-color: $gold;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__green {
+    background-color: $green;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $green;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $green;
+      &:hover, &:active {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__blue {
+    background-color: $blue;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $blue;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $blue;
+      &:hover, &:active {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__red {
+    background-color: $red;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $red;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $red;
+      &:hover, &:active {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__purple {
+    background-color: $purple;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $purple;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $purple;
+      &:hover, &:active {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn__black {
+    background-color: $black;
+    color: $white;
+    &:hover, &:active {
+      background-color: $white;
+      color: $black;
+    }
+    &.inverted {
+      background-color: $white;
+      color: $black;
+      &:hover, &:active {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}

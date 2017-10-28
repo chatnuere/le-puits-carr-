@@ -1,0 +1,22 @@
+.distance {
+
+}
+.distance--icon, .distance--value {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.distance--icon {
+  &:before {
+    font-size: 1.75em;
+    color: $grey;
+  }
+}
+
+.distance--value {
+  color: $grey;
+  font-family: $gotham;
+  font-size: em(14px);
+  line-height: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}

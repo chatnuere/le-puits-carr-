@@ -1,0 +1,169 @@
+footer {
+  background-color: #4f4f4f;
+  color: #fff;
+  .footer {
+    padding-bottom: em(30px);
+    padding-top: em(30px);
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: $red;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.footer--logo .logo {
+  text-align: left;
+}
+
+.copyrights {
+  background-color: $brown;
+  text-align: center;
+  padding: em(20px);
+
+  a, p {
+    font-size: em(12px);
+    font-family: $gothamRounded;
+    font-weight: 300;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: em(5px, 12px);
+    margin: 0 em(5px, 12px);
+  }
+
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.footer--logo {
+  margin-bottom: em(30px);
+}
+
+.footer-address, .footer-tel {
+  display: block;
+  font-size: em(14px);
+  font-family: $garamond;
+  line-height: em(24px);
+}
+
+/* Nav */
+.footer--nav, .footer--social-tile {
+  text-transform: uppercase;
+  font-family: $gothamRounded;
+  font-size: em(12px);
+  font-weight: 300;
+}
+
+.footer--nav-item {
+  margin-bottom: em(14px, 12px);
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer--nav-item-link {
+  display: inline-block;
+  padding: em(5px, 12px);
+}
+
+/* Social */
+
+.footer--social-tile {
+  margin-bottom: em(20px, 12px);
+  display: inline-block;
+}
+
+.footer--social-item {
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+  border-radius: 50%;
+  margin: 0 em(5px);
+  &:before {
+    content: '';
+    display: block;
+    width: em(49px);
+    height: em(49px);
+    background-color: #fff;
+    position: absolute;
+    left: em(3px);
+    top: em(3px);
+    border-radius: 50%;
+    z-index: 0;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.3s ease-out
+  }
+
+  &:hover {
+    &:before {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.footer--social-item-link {
+  font-size: em(32px);
+  padding: em(8px, 32px) em(9px, 32px) em(2px, 32px) em(8px, 32px);
+  color: #9e9e9e;
+  border: 3px solid;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  transition: color 0.2s ease-out;
+
+  i:before {
+    color: #9e9e9e;
+    transition: color 0.2s ease-out;
+  }
+}
+
+.item-facebook {
+  .footer--social-item-link {
+    &:hover {
+      color: #3b5998;
+      i:before {
+        color: #3b5998;
+      }
+    }
+  }
+}
+
+.item-instagram {
+  .footer--social-item-link {
+    &:hover {
+      color: #8a3ab9;
+      i:before {
+        color: #8a3ab9;
+      }
+    }
+  }
+}
+
+.item-airbnb {
+  .footer--social-item-link {
+    padding: em(8px, 32px) em(9px, 32px) em(2px, 32px) em(10px, 32px);
+    &:hover {
+      color: #fd5c63;
+      i:before {
+        color: #fd5c63;
+      }
+    }
+  }
+}
+

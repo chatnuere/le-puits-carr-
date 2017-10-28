@@ -1,0 +1,12 @@
+.rooms__wrapper--room {
+  .room__text-content.with-return {
+    padding-left: 0;
+  }
+
+  .room {
+    margin: 4em 0;
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+}

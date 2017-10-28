@@ -1,0 +1,21 @@
+.footer {
+  .footer--logo {
+    .logo {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .footer-address, .footer-tel, .social__block {
+    text-align: center;
+  }
+
+  .footer-tel {
+    margin-bottom: 3em;
+  }
+
+  .footer--nav {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,44 @@
+.roomIncluded {
+  background-color: #3d3b3b;
+  padding: em(70px) 0 em(30px);
+  color: #fff;
+}
+
+.roomIncluded--title {
+  font-family: $didot;
+  font-size: em(22px);
+  padding-bottom: em(30px, 22px);
+  margin: 0 0 em(80px, 22px);
+  text-transform: uppercase;
+  letter-spacing: +8px;
+  position: relative;
+  display: inline-block;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 60%;
+    background-color: #fff;
+    left: 20%;
+    height: 1px;
+    bottom: 0;
+  }
+}
+.roomIncluded--item {
+  margin-bottom: 60px;
+}
+.roomIncluded--item-icon {
+  margin-bottom: em(25px);
+  display: block;
+  &:before {
+    font-size: em(40px);
+  }
+}
+
+.roomIncluded--item-legend {
+  font-family: $gotham;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: em(12px);
+  margin: 0;
+}

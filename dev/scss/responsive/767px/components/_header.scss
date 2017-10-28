@@ -1,0 +1,29 @@
+.menu__logo__wrapper {
+  opacity: 0;
+}
+
+.scrolled {
+  .menu__logo__wrapper {
+    width: calc(100% - #{em(202px)});
+    opacity: 1;
+  }
+
+  .menu__languages {
+    opacity: 0;
+    position: absolute;
+    top: em(25px);
+    right: 0;
+  }
+
+  .open {
+    .menu__languages {
+      opacity: 1;
+      transition: opacity 0.4s ease-out;
+      transition-delay: 0.29s;
+    }
+  }
+}
+
+.menu__panel--link .menu__panel--title {
+  font-size: em(18px);
+}

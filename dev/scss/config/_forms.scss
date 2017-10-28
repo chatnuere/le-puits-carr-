@@ -1,0 +1,340 @@
+
+//import compass
+
+//color palette
+$primary-color: $red;
+$form-color: $grey;
+$active-font: $black;
+$theme-color: $blue;
+$error-color: $red;
+//contact form
+.material-form {
+  padding: em(15px);
+  background-color: #fff;
+  .input-block {
+    background-color: #fff;
+    border-bottom: solid 1px #c8c8c8;
+    width: 100%;
+    height: em(50px);
+    padding: 0;
+    position: relative;
+    margin-bottom: em(20px);
+    transition: all 0.3s ease-out;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 0%;
+      bottom: 0;
+      height: 2px;
+      transition: all 0.3s ease-out;
+      background-color: $theme-color;
+    }
+    &.focus {
+      border-color: #fff;
+      label {
+        color: $blue;
+        top: 0;
+        font-size: em(13px);
+      }
+      &::before {
+        left: 0%;
+        width: 100%;
+      }
+    }
+    &.has-value {
+      background-color: #fff;
+      label {
+        top: 0;
+        font-size: em(13px);
+      }
+    }
+    &.error {
+      border-color: #fff;
+      &::before {
+        left: 0%;
+        width: 100%;
+        background-color: $error-color;
+      }
+    }
+    &.textarea {
+
+      height: auto;
+      .form-control {
+        min-height: 8em;
+        height: auto;
+        resize: none;
+        padding-top: em(20px);
+      }
+    }
+    &.floating-field {
+      padding: 2px 0 0;
+      height: em(62px);
+      &.textarea {
+        height: auto;
+      }
+    }
+    label {
+      position: absolute;
+      left: 0;
+      top: em(29px, 13px);
+      width: 100%;
+      height: em(20px, 13px);
+      margin: 0;
+      font-weight: 500;
+      z-index: 1;
+      color: $form-color;
+      font-size: em(13px);
+      transition: all 0.3s ease-out;
+      line-height: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .form-control {
+      background-color: transparent;
+      padding: 4px 0 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      font-size: em(14px);
+      font-weight: 500;
+      color: $active-font;
+    }
+    .form-control:focus {
+      outline: none;
+      label {
+        top: 0;
+      }
+    }
+  }
+  .error-label {
+    color: $error-color;
+    font-size: em(14px);
+    margin-top: em(-15px, 14px);
+    margin-bottom: em(10px, 14px);
+  }
+  .form-note {
+    font-size: em(13px);
+    color: $form-color;
+    margin-top: em(-15px, 13px);
+    margin-bottom: em(15px, 13px);
+  }
+}
+
+/*dropdown list as ul li method*/
+
+.select-block {
+  $size: em(52px);
+  $padding: 15px;
+  background-color: #fff;
+  width: 100%;
+  padding: 12px 0 0;
+  position: relative;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-out;
+  label {
+    position: absolute;
+    left: 0;
+    top: 32px;
+    height: 20px;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    margin: 0;
+    font-weight: 500;
+    z-index: 1;
+    color: $form-color;
+    font-size: 12px;
+    line-height: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .active-list {
+    width: 100%;
+    height: $size;
+    padding: 0;
+    color: #c9c9c9;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 20px;
+    box-sizing: border-box;
+    &:after {
+      content: "▼";
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      top: 50%;
+      width: 20px;
+      padding-left: 5px;
+      text-align: left;
+      height: $size;
+      line-height: $size;
+      color: $form-color;
+      font-size: 14px;
+      margin-top: -$size/2;
+    }
+  }
+  &.added {
+    label {
+      top: 0;
+      font-size: 13px;
+    }
+    .active-list {
+      color: $active-font;
+      font-size: 12px;
+    }
+  }
+  &.added.focus {
+    label {
+      top: 0;
+    }
+  }
+  &.focus {
+    label {
+      top: 0;
+      font-size: 13px;
+      color: $theme-color;
+    }
+    .active-list {
+      font-size: 12px;
+    }
+    .custom-select {
+      border-color: #fff;
+    }
+    .active-list:after {
+      content: "▲";
+      color: $active-font;
+    }
+    .custom-select::before {
+      left: 0%;
+      width: 100%;
+    }
+  }
+  .custom-select {
+    border-bottom: solid 1px #c8c8c8;
+    display: inline-block;
+    height: $size;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    line-height: $size;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 0%;
+      bottom: 0;
+      height: 2px;
+      transition: all 0.3s ease-out;
+      background-color: $theme-color;
+    }
+    .list-field {
+      width: 100%;
+      height: $size;
+      padding: 0 $padding;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+    .drop-down-list {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      overflow-x: auto;
+      z-index: 99;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      margin-top: 2px;
+      left: 0;
+      background-color: white;
+      display: none;
+      box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+      li {
+        padding: $padding*.70 $padding;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: normal;
+        background-color: #fafafa;
+        background-color: #fff;
+        transition: all 0.3s ease-out;
+        input[type="checkbox"] {
+          margin: 0;
+          margin-right: 8px;
+          position: relative;
+          top: 1px;
+        }
+        label {
+          font-weight: normal;
+          cursor: pointer;
+          display: block;
+        }
+      }
+      li:hover {
+        color: $active-font;
+        background-color: rgba(black, .05);
+      }
+    }
+    .drop-down-list .add-new {
+      border-top: solid 1px #c8c8c8;
+      padding: $padding;
+      color: $active-font;
+      i {
+        font-size: 16px;
+        margin-top: 3px;
+        color: $form-color;
+      }
+    }
+  }
+}
+
+//tablet and above devices
+@media (min-width: 768px) {
+  .material-form {
+    .input-block {
+      label {
+        font-size: 18px;
+        line-height: 14px;
+      }
+      .form-control {
+        font-size: 18px;
+      }
+    }
+  }
+  .select-block {
+    label {
+      font-size: 18px;
+      line-height: 14px;
+    }
+    &.added {
+      .active-list {
+        font-size: 18px;
+      }
+    }
+    &.focus {
+      .active-list {
+        font-size: 18px;
+      }
+    }
+    .custom-select {
+      .drop-down-list {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .material-form {
+    padding: 30px;
+  }
+}

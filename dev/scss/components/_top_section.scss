@@ -1,0 +1,20 @@
+.top_section {
+  min-height: 100vh;
+  background: url("../../imgs/content/home--full.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
+
+  .mobile_logo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .logo__title, .logo__subtitle {
+      color: #fff;
+    }
+  }
+}
+

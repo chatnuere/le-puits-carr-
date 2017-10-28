@@ -1,0 +1,26 @@
+{
+  "name": "le-puits-carre",
+  "version": "1.0.0",
+  "description": "theme wordpress LPC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chatnuere/le-puits-carr-/tree/master/js"
+  },
+  "private": true,
+  "author": "Quentin Chapon - Dugué Pierre-Jean",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-csso": "latest",
+    "gulp-data": "^1.2.1",
+    "gulp-htmlmin": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest"
+  }
+}
