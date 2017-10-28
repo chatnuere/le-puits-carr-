@@ -1,17 +1,11 @@
-naked-wordpress
+Le puits carré
 ===============
 
-A well-commented blank Wordpress theme.
-
+Wordpress theme for the B&B website Le Puits carré.
+at  10, Impasse Pasquier 30190 Garrigues-Sainte-Eulalie France tel: 0033 4 66 58 94 93
 ### Contributors
-- [@andjosh][0] _(maintainer)_
-- [@kodewilliams][1]
-- [@JohnnyWalkerDesign][2]
-- [@ljllewellyn][3]
-- [@Munnday][4]
+- Quentin Chapon ( Design )
+- Pierre-Jean Dugué (Developpement)
 
-[0]: https://github.com/andjosh
-[1]: https://github.com/kodewilliams
-[2]: https://github.com/JohnnyWalkerDesign
-[3]: https://github.com/ljllewellyn
-[4]: https://github.com/Munnday
+
+all rights reserved
