@@ -12,6 +12,15 @@
   font-size: em(21px);
   font-family: $garamond;
   padding: em(10px, 21px) 0;
+  position: relative;
+  .roomNavigation--btn-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
   i, span {
     display: inline-block;
@@ -29,7 +38,6 @@
       background-color: lighten($purple, 10%);
     }
   }
-
 
   &.roomNavigation--btn-left {
     padding-right: em(30px, 21px);
@@ -65,8 +73,6 @@
       background-color: lighten($grey, 10%);
     }
   }
-
-
 
   transition: background-color 0.3s ease-out;
 }

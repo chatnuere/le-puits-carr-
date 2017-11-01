@@ -5,42 +5,60 @@
  */
 
 get_header(); // This fxn gets the header.php file and renders it ?>
-	<div id="primary" class="row-fluid">
-		<div id="content" role="main" class="span8 offset2">
+<?php if (have_posts()) :
+  // Do we have any posts in the databse that match our query?
+  ?>
 
-			<?php if ( have_posts() ) : 
-			// Do we have any posts/pages in the databse that match our query?
-			?>
+  <?php while (have_posts()) : the_post();
+  // If we have a post to show, start a loop that will display it
+  ?>
 
-				<?php while ( have_posts() ) : the_post(); 
-				// If we have a page to show, start a loop that will display it
-				?>
+  <section class="top_section top_section--room" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+    <div class="mobile_logo">
+      <div class="logo">
+        <div class="icon-lpc__logo logo__icon"></div>
+        <h2 class="logo__title"><?php ot_get_option('titre_logo'); ?></h2>
+        <h3 class="logo__subtitle"><?php echo ot_get_option('sous_titre_logo'); ?></h3>
+      </div>
+    </div>
+  </section>
 
-					<article class="post">
-					
-						<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
-						
-						<div class="the-content">
-							<?php the_content(); 
-							// This call the main content of the page, the stuff in the main text box while composing.
-							// This will wrap everything in p tags
-							?>
-							
-							<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
-						</div><!-- the-content -->
-						
-					</article>
+  <div class="intro intro--room intro--region ">
+    <div class="container container--small center">
+      <h1 class="intro--title scrollMagic__introSlideup">
+        <?php the_title(); ?>
+      </h1>
+    </div>
+    <div class="intro--text">
+      <div class="container container--small center">
+        <p class="scrollMagic__smoothSlideUp">
+        </p>
+      </div>
+    </div>
+  </div>
 
-				<?php endwhile; // OK, let's stop the page loop once we've displayed it ?>
+  <article class="post container">
 
-			<?php else : // Well, if there are no posts to display and loop through, let's apologize to the reader (also your 404 error) ?>
-				
-				<article class="post error">
-					<h1 class="404">Nothing posted yet</h1>
-				</article>
+    <div class="the-content">
+      <?php the_content();
+      // This call the main content of the page, the stuff in the main text box while composing.
+      // This will wrap everything in p tags
+      ?>
 
-			<?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
+      <?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
+    </div><!-- the-content -->
 
-		</div><!-- #content .site-content -->
-	</div><!-- #primary .content-area -->
+  </article>
+
+<?php endwhile; // OK, let's stop the page loop once we've displayed it
+  ?>
+
+<?php else : // Well, if there are no posts to display and loop through, let's apologize to the reader (also your 404 error) ?>
+
+  <article class="post error">
+    <h1 class="404">Nothing posted yet</h1>
+  </article>
+
+<?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
+
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>

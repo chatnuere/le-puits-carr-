@@ -1,4 +1,10 @@
 
+@media (max-width: em(1320px)) {
+  .mfp-close-btn-in .mfp-close {
+    color: #333!important;
+  }
+}
+
 @media (max-width: em(1023px)) {
   @import "1023px/config/general";
   @import "1023px/config/forms";
@@ -71,6 +77,10 @@
   @import "767px/pages/region";
   @import "767px/pages/house";
   @import "767px/pages/contact";
+}
+
+@media (max-width: 782px) {
+  @import "782px/config/admin";
 }
 
 

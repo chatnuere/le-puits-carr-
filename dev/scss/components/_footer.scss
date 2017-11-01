@@ -167,3 +167,22 @@ footer {
   }
 }
 
+.copyrights .container > div, .copyrights .footer_menu, .copyrights .footer_menu li {
+  display: inline;
+}
+
+.footer.container {
+  .footer--nav {
+    a {
+      display: inline-block;
+      padding: em(5px);
+    }
+
+    .menu-item {
+      margin-bottom: em(15px, 12px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

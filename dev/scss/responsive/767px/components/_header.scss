@@ -1,10 +1,15 @@
 .menu__logo__wrapper {
   opacity: 0;
+
+}
+
+.menu__logo__wrapper .menu__logo {
+  left: calc(50% + 101px);
 }
 
 .scrolled {
   .menu__logo__wrapper {
-    width: calc(100% - #{em(202px)});
+
     opacity: 1;
   }
 

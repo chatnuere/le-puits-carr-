@@ -1,10 +1,10 @@
-(function ($) {
-  $(document).ready(function () {
-    if ($(".menu").length > 0) {
+(function($) {
+  $(document).ready(function() {
+    if($(".menu").length > 0) {
       new $.fn.ScrollMagicService;
     }
 
-    $('.menu__btn__wrapper').on('click', function () {
+    $('.menu__btn__wrapper').on('click', function() {
       $('.menu__fixed').toggleClass('open')
       $('body').toggleClass('cant_move')
     });
@@ -17,7 +17,7 @@
       prev: '.simpleSlider--prev'
     });
 
-    $('.simpleSlider--itemWrapper').on('film_roll:resized film_roll:moved film_roll:dom_ready', function () {
+    $('.simpleSlider--itemWrapper').on('film_roll:resized film_roll:moved film_roll:dom_ready', function() {
       var position = ($(window).width() - $('.simpleSlider--item.active').outerWidth()) / 2
       $('.simpleSlider--prev').css({
         left: position + 'px'
@@ -36,7 +36,7 @@
       prev: '.regionSlider--prev'
     });
 
-    $('.regionSlider--itemWrapper').on('film_roll:resized film_roll:moved film_roll:dom_ready', function () {
+    $('.regionSlider--itemWrapper').on('film_roll:resized film_roll:moved film_roll:dom_ready', function() {
       var position = ($(window).width() - $('.regionSlider--item.active').outerWidth()) / 2
       $('.regionSlider--prev').css({
         left: position + 'px'
@@ -62,46 +62,46 @@
 
 //##case 1 for default style
 //on focus
-    formItem.focus(function () {
-      $(this).parent('.input-block').addClass('focus');
+    formItem.focus(function() {
+      $(this).parent().parent().addClass('focus');
     });
 //removing focusing
-    formItem.blur(function () {
-      $(this).parent('.input-block').removeClass('focus');
+    formItem.blur(function() {
+      $(this).parent().parent().removeClass('focus');
     });
 
 //##case 2 for floating style
 //initiating field
-    floatingField.each(function () {
+    floatingField.each(function() {
       var targetItem = $(this).parent();
-      if ($(this).val()) {
+      if($(this).val()) {
         $(targetItem).addClass('has-value');
       }
     });
 
 //on typing
-    floatingField.blur(function () {
-      $(this).parent('.input-block').removeClass('focus');
+    floatingField.blur(function() {
+      $(this).parent().parent().removeClass('focus');
       //if value is not exists
-      if ($(this).val().length == 0) {
-        $(this).parent('.input-block').removeClass('has-value');
+      if($(this).val().length == 0) {
+        $(this).parent().parent().removeClass('has-value');
       } else {
-        $(this).parent('.input-block').addClass('has-value');
+        $(this).parent().parent().addClass('has-value');
       }
     });
 
 //dropdown list
-    $('body').click(function () {
-      if ($('.custom-select .drop-down-list').is(':visible')) {
+    $('body').click(function() {
+      if($('.custom-select .drop-down-list').is(':visible')) {
         $('.custom-select').parent().removeClass('focus');
       }
       $('.custom-select .drop-down-list:visible').scrollMagic__smoothSlideUp();
     });
-    $('.custom-select .active-list').click(function () {
+    $('.custom-select .active-list').click(function() {
       $(this).parent().parent().addClass('focus');
       $(this).parent().find('.drop-down-list').stop(true, true).delay(10).slideToggle(300);
     });
-    $('.custom-select .drop-down-list li').click(function () {
+    $('.custom-select .drop-down-list li').click(function() {
       var listParent = $(this).parent().parent();
       //listParent.find('.active-list').trigger("click");
       listParent.parent('.select-block').removeClass('focus').addClass('added');
@@ -111,22 +111,16 @@
 
     var marker
 
-    var initMap = function () {
+    var initMap = function() {
       var lpc = {lat: 43.987552, lng: 4.299509};
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: lpc
       });
-      var contentString = '<div id="infoWindow" class="center">' +
-        '<h2 id="firstHeading"><i class="icon-lpc__logo"></i> Le puits carré</h2>' +
-        '<div class="left infoWindow--content">' +
-        '<p>32, rue de Sainte-Eulalie</p>' +
-        '<p>30190 Garrigues-Sainte-Eulalie</p>' +
-        '<p>Tél : 04 66 58 94 93</p>' +
-        '<a class=" btn btn__blue btn__large"  target="_blank" href="https://www.google.fr/maps/dir/\'\'/32+Place+des+Retraites+Sainte-Eulalie,+30190+Garrigues-Sainte-Eulalie/data=!4m5!4m4!1m0!1m2!1m1!1s0x12b43668b01ea3c5:0xa55bcbb67beff68e?sa=X&ved=0ahUKEwj67a77mrvWAhUqKMAKHQr7B3EQwwUIJzAA">Itinéraire</a>' +
-        '</div>' +
-        '</div>';
-
+      var custom_marker = $('.marker--template').clone();
+      custom_marker.removeAttr('style');
+      custom_marker.attr('id','infoWindow')
+      var contentString = custom_marker[0];
       var infowindow = new google.maps.InfoWindow({
         content: contentString,
         pixelOffset: new google.maps.Size(-150, 185),
@@ -146,14 +140,35 @@
       });
     }
 
-    if ($("#map").length > 0) {
+    if($("#map").length > 0) {
       console.log('titi')
-      $('body').on('googlemapapiloaded', function () {
+      $('body').on('googlemapapiloaded', function() {
         console.log('toto')
         initMap();
         $(marker).click()
       })
     }
 
+    $('.open-popup-link').magnificPopup({
+      type: 'inline',
+      midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      closeBtnInside: true,
+      callbacks: {
+        open: function() {
+          var self = this;
+          $( "body" ).trigger({
+            type:"popup--open",
+            popup: self.container[0]
+          });
+        },
+        close: function() {
+          var self = this;
+          $( "body" ).trigger({
+            type:"popup--close",
+            popup: self.container[0]
+          });
+        }
+      }
+    });
   });
 }(jQuery));

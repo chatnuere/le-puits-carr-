@@ -35,6 +35,7 @@ gulp.task('scripts', function() {
     destination + '/scripts/lib/jquery.gsap.min.js',
     destination + '/scripts/lib/ScrollMagic.gsap.js',
     destination + '/scripts/lib/jquery.film_roll.min.js',
+    destination + '/scripts/lib/jquery.magnific-popup.min.js',
     destination + '/scripts/services/**/*.js',
     destination + '/scripts/main.js'
   ])

@@ -32,8 +32,7 @@
 }
 
 .menu__logo__wrapper {
-  width: calc(100% - #{em(326px)});
-  position: relative;
+  width: 100%;
   /* top: 0; */
   height: em(67px);
 
@@ -46,45 +45,62 @@
 }
 
 .menu__contact {
-  @include rem(font-size, 12px);
   display: inline-block;
-  background-color: $blue;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  vertical-align: middle;
-  padding: em(27px, 12px) em(36px, 12px) em(26px, 12px);
-  line-height: em(14px, 12px);
+  a {
+    display: inline-block;
+    @include rem(font-size, 12px);
+    background-color: $blue;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    vertical-align: middle;
+    padding: em(27px, 12px) em(36px, 12px) em(26px, 12px);
+    line-height: em(14px, 12px);
+  }
 }
 
 .menu__leftBtns {
   font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .menu__languages {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
   text-transform: uppercase;
-  margin: 0 2em;
+  margin: em(-10px) 2em 0;
   font-weight: 700;
-  position: relative;
   z-index: 30;
+  min-width: em(61px);
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: em(10px);
+    &:last-child {
+      margin-right: 0;
+    }
+    &.current-lang a {
+      opacity: 1;
+      cursor: default;
+    }
+
+    &:hover:not(.current-lang) a {
+      text-decoration: underline;
+    }
+  }
+
   a {
     transition: color 0.3s ease-out;
     opacity: 0.8;
     color: #fff;
     text-decoration: none;
-    margin-right: em(10px);
-    &.active {
-      opacity: 1;
-      cursor: default;
-    }
-    &:hover:not(.active) {
-      text-decoration: underline;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
 
   }
 }
@@ -136,6 +152,7 @@
 .menu__panel--link {
   text-decoration: none;
   .menu__panel--title {
+    display: inline-block;
     color: $blue;
     font-family: $gotham;
     font-size: em(24px);
@@ -160,3 +177,19 @@
   }
 }
 
+.menu__leftBtns {
+  > div {
+    display: inline-block;
+  }
+}
+
+.menu__contact {
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
