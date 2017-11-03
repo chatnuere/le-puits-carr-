@@ -92,7 +92,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
     </div>
   </div>
 
-  <div class="container mapParent" data-mapinfo='<?php echo(json_encode($arr)); ?>'>
+  <div class="mapParent" data-mapinfo='<?php echo(json_encode($arr)); ?>'>
     <div id="map" class="scrollMagic__smoothSlideUp"></div>
   </div>
 

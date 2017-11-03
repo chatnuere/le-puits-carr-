@@ -145,21 +145,33 @@ get_header(); // This fxn gets the header.php file and renders it ?>
         <? if ($the_query->have_posts()) : ?>
           <? while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <div class="col col-1-3__xl col-1-2__m col-1-1__s selection--item scrollMagic__smoothSlideUp">
-              <a href="#selectionPopup<?php echo $row ?>" class="selection--item--wrapper open-popup-link">
+              <?php
+              if (get_field('selection_is_link')) {
+                $link_object = get_field("selection_link");
+                $link = $link_object['url'];
+                $target = 'target="' .$link['target'] .'"';
+                $class= '';
+              } else {
+                $link = '#selectionPopup'.$row;
+                $css_class= 'open-popup-link';
+                $target = '';
+              }
+              ?>
+              <a href="<?php echo $link ?>" class="selection--item--wrapper<?php echo $css_class ?>" <?php echo $target; ?>>
                 <div class="selection--item--component component--icon">
-                <?php if (get_field('selection_icon_type') == 'icomoon'): ?>
-                  <i class="icon-<?php the_field('selection_icomoon_icon'); ?> "></i>
-                <? else: ?>
-                  <i class="fa <?php the_field('selection_font_awesome_icon'); ?> "></i>
-                <? endif; ?>
+                  <?php if (get_field('selection_icon_type') == 'icomoon'): ?>
+                    <i class="icon-<?php the_field('selection_icomoon_icon'); ?> "></i>
+                  <? else: ?>
+                    <i class="fa <?php the_field('selection_font_awesome_icon'); ?> "></i>
+                  <? endif; ?>
                 </div>
                 <div class="selection--item--component">
                   <h3 class="selection--title"><?php the_field('selection_title') ?></h3>
-                    <div class="distance scrollMagic__smoothSlideLeft">
-                      <i class="icon-sign distance--icon"></i>
-                      <span class="distance--value "><?php the_field('selection_distance') ?>
-                        km</span>
-                    </div>
+                  <div class="distance scrollMagic__smoothSlideLeft">
+                    <i class="icon-sign distance--icon"></i>
+                    <span class="distance--value "><?php the_field('selection_distance') ?>
+                      km</span>
+                  </div>
                 </div>
               </a>
             </div>
@@ -184,26 +196,29 @@ get_header(); // This fxn gets the header.php file and renders it ?>
     ?>
     <? if ($the_query->have_posts()) : ?>
       <? while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <div id="selectionPopup<?php echo $row ?>" class="white-popup mfp-hide">
-          <div class="popupcontent">
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-            <?php if (get_field('selection_show_critic')) : ?>
-              <div class="wysiwyg--wrapper">
-                <?php the_field('selection_critic') ?>
-              </div>
-            <?php endif; ?>
-            <?php
+        <?php if (!get_field('selection_is_link')) : ?>
+          <div id="selectionPopup<?php echo $row ?>" class="white-popup mfp-hide">
+            <div class="popupcontent">
+              <button title="Close (Esc)" type="button" class="mfp-close">×
+              </button>
+              <?php if (get_field('selection_show_critic')) : ?>
+                <div class="wysiwyg--wrapper">
+                  <?php the_field('selection_critic') ?>
+                </div>
+              <?php endif; ?>
+              <?php
 
-            $location = get_field('selection_adresse');
-            if (!empty($location)):
-              ?>
-              <div class="acf-map">
-                <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-              </div>
-              <p style="text-align: right"><?php echo($location['address']) ?></p>
-            <?php endif; ?>
+              $location = get_field('selection_adresse');
+              if (!empty($location)):
+                ?>
+                <div class="acf-map">
+                  <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+                </div>
+                <p style="text-align: right"><?php echo($location['address']) ?></p>
+              <?php endif; ?>
+            </div>
           </div>
-        </div>
+        <?php endif; ?>
         <?php $row++ ?>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
