@@ -149,8 +149,8 @@ get_header(); // This fxn gets the header.php file and renders it ?>
               if (get_field('selection_is_link')) {
                 $link_object = get_field("selection_link");
                 $link = $link_object['url'];
-                $target = 'target="' .$link['target'] .'"';
-                $class= '';
+                $target = 'target="' .$link_object['target'] .'"';
+                $css_class= '';
               } else {
                 $link = '#selectionPopup'.$row;
                 $css_class= 'open-popup-link';
