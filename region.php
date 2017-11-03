@@ -157,7 +157,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
                 $target = '';
               }
               ?>
-              <a href="<?php echo $link ?>" class="selection--item--wrapper<?php echo $css_class ?>" <?php echo $target; ?>>
+              <a href="<?php echo $link ?>" class="selection--item--wrapper <?php echo $css_class ?>" <?php echo $target; ?>>
                 <div class="selection--item--component component--icon">
                   <?php if (get_field('selection_icon_type') == 'icomoon'): ?>
                     <i class="icon-<?php the_field('selection_icomoon_icon'); ?> "></i>
