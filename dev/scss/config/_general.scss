@@ -26,6 +26,9 @@ body {
     max-width:  em(920px);
     min-width:  em(300px);
   }
+  &.noPadding {
+    padding: 0;
+  }
 }
 
 p {

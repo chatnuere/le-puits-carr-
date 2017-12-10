@@ -16,6 +16,7 @@
       this.footer();
       this.house();
       this.rooms();
+      this.introImg();
     }
   };
 
@@ -104,7 +105,7 @@
     //rooms sliding
     var scrollMagicController = this.controller;
     var offset = -(parseInt($(window).height() / 2.5));
-    
+
     $('.anim__tweenOdd').each(function() {
       var id = '#' + $(this).attr('id');
 
@@ -327,7 +328,7 @@
     //rooms sliding
     var scrollMagicController = this.controller;
     var offset = -(parseInt($(window).height() / 2.5));
-    
+
     $('.anim__roomtweenOdd').each(function() {
       var id = '#' + $(this).attr('id');
       ///// puits home
@@ -372,7 +373,7 @@
 
     $('.anim__roomtweenEven').each(function() {
       var id = '#' + $(this).attr('id');
-      
+
       var img = TweenMax.fromTo(id + ' .room__image-wrapper', 0.6,
         {opacity: 0, x: "30%"},
         {opacity: 1, x: '0%'}
@@ -561,6 +562,25 @@
     })(navigator.userAgent || navigator.vendor || window.opera);
   }
 
+  ScrollMagicService.prototype.introImg = function() {
+    // init controller
+    var scrollMagicController = this.controller
 
+    // Animation will be ignored and replaced by scene value in this example
+    var tween = TweenMax.fromTo(".top_section--img", 1,
+      {backgroundPositionY: 0},
+      {backgroundPositionY: 50}
+    );
+
+
+
+    // Create the Scene and trigger when visible
+    var scene = new ScrollMagic.Scene({
+      offset: 0,
+      duration: $(window).height() /* How many pixels to scroll / animate */
+    })
+      .setTween(tween)
+      .addTo(scrollMagicController);
+  };
 }());
 

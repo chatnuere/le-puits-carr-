@@ -5,8 +5,16 @@
     }
 
     $('.menu__btn__wrapper').on('click', function() {
-      $('.menu__fixed').toggleClass('open')
-      $('body').toggleClass('cant_move')
+      var $menu = $('.menu__fixed');
+
+      if(!$menu.hasClass('open') ) {
+        $('.menu__fixed').removeClass('close').addClass('open')
+        $('body').addClass('cant_move')
+      } else {
+        $('.menu__fixed').removeClass('open').addClass('close')
+        $('body').removeClass('cant_move')
+      }
+
     });
 
     var film_roll = new FilmRoll({
@@ -119,7 +127,7 @@
       });
       var custom_marker = $('.marker--template').clone();
       custom_marker.removeAttr('style');
-      custom_marker.attr('id','infoWindow')
+      custom_marker.attr('id', 'infoWindow')
       var contentString = custom_marker[0];
       var infowindow = new google.maps.InfoWindow({
         content: contentString,
@@ -156,19 +164,61 @@
       callbacks: {
         open: function() {
           var self = this;
-          $( "body" ).trigger({
-            type:"popup--open",
+          $("body").trigger({
+            type: "popup--open",
             popup: self.container[0]
           });
         },
         close: function() {
           var self = this;
-          $( "body" ).trigger({
-            type:"popup--close",
+          $("body").trigger({
+            type: "popup--close",
             popup: self.container[0]
           });
         }
       }
+    });
+
+    var $cta = $('.cta_svgWrapper');
+
+    if($cta.length > 0) {
+      var setCtaBottom = function() {
+        var $intro = $('.intro');
+        if($intro.length > 0) {
+          if($(window).width() > 767) {
+            $cta.css({
+              "bottom": $('.intro').outerHeight(true) + 'px'
+            });
+          } else {
+            $cta.css({
+              "bottom": $('.mobile_intro--title').outerHeight(true) + 'px'
+            });
+          }
+        } else {
+          $cta.css({
+            "bottom": '0px'
+          });
+        }
+      }
+
+      setCtaBottom();
+
+      $(window).on('resize', function() {
+        setCtaBottom()
+      });
+
+    }
+
+
+    $(".menu__panel .menu-item").each(function(index){
+      var s = 0.2
+      $(this).css({
+        'animation-delay' : s*(1+index) + 's'
+      });
+    });
+
+    $('.galleryItem').magnificPopup({
+      type: 'image'
     });
   });
 }(jQuery));

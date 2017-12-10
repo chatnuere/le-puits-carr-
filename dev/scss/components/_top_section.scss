@@ -1,10 +1,10 @@
 .top_section {
   min-height: 100vh;
-  background: url($imgsPath + "home--full.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: em(100px);
   position: relative;
   z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
 
   .mobile_logo {
     display: none;
@@ -15,6 +15,16 @@
     .logo__title, .logo__subtitle {
       color: #fff;
     }
+  }
+
+  .top_section--img {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    //background-attachment: fixed;
   }
 }
 

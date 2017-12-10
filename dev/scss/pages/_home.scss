@@ -26,10 +26,15 @@
 }
 
 .discover__text-wrapper {
+  display: inline-block;
   background-color: $gold;
   color: #fff;
-  padding: em(70px) em(30px);
+  box-sizing: border-box;
+  padding: em(85px) em(70px) em(70px) em(30px);
   overflow: hidden;
+  width: 100%;
+  max-width: em(434px);
+  margin-bottom: em(-4px);
 }
 
 .discover__title {
@@ -47,7 +52,7 @@
 .discover__text-content {
   font-weight: 300;
   font-size: em(14px);
-margin-bottom: em(40px, 14px);
+  margin-bottom: em(40px, 14px);
   p {
     font-family: $gothamRounded;
   }
@@ -57,5 +62,5 @@ margin-bottom: em(40px, 14px);
 }
 
 .btn-discover {
-font-size: em(14px);
+  font-size: em(14px);
 }

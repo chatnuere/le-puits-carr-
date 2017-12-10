@@ -1,20 +1,40 @@
+.intro {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .intro--title, .intro--text {
   background-color: $grey;
   color: #fff;
 }
 
 .intro--title {
-  margin: em(-115px, 34px) 0 0;
+  display: inline-block;
+  margin: 0 auto;
   font-size: em(34px);
   text-transform: uppercase;
   letter-spacing: +2px;
   padding: em(40px, 34px) em(15px, 34px) 0;
+  line-height: 1.3em;
+}
+
+.mobile_intro--title {
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 
 .intro--text {
   font-size: em(18px, 16px);
   padding: em(40px, 18px) 0;
   font-family: $garamond;
+
+  &.notIntroDesc {
+    padding-bottom: 0;
+  }
   a {
     color: $red;
   }
@@ -49,5 +69,57 @@
   .intro--title, .intro--text {
     background-color: $blue;
     color: #fff;
+  }
+}
+
+body:not(.scrolled) {
+  .cta_svgWrapper {
+    animation-name: showCta;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+.cta_svgWrapper {
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  padding-bottom: 1em;
+  display: inline-block;
+  width: 5em;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  .icon-scroll {
+    font-size: 4.5em;
+    color: #fff;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    text-shadow: 0 0 10px rgba(#000,0.6);
+  }
+}
+
+@keyframes showCta {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, 10%);
   }
 }

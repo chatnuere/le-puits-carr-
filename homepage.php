@@ -6,17 +6,13 @@
  *  and can be used as a home page, in which case the title will not show up.
  *
  */
-get_header(); // This fxn gets the header.php file and renders it ?>
+get_header(); // This fxn gets the header.php file and renders it
 
-<section class="top_section home" style="background-image: url('<?php the_field('home_top_section_image'); ?>');">
-  <div class="mobile_logo">
-    <div class="logo">
-      <div class="icon-lpc__logo logo__icon"></div>
-      <h2 class="logo__title"><?php ot_get_option('titre_logo'); ?></h2>
-      <h3 class="logo__subtitle"><?php echo ot_get_option('sous_titre_logo'); ?></h3>
-    </div>
-  </div>
-</section>
+set_query_var( 'intro_section_image', get_field('home_top_section_image'));
+set_query_var( 'intro_section_class', 'home');
+set_query_var( '$show_intro', false);
+get_template_part( 'partials/top_section' );
+?>
 
 <?php if (get_field("home_show_welcome_section")): ?>
   <div class="welcome">
@@ -133,11 +129,11 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 
   <div class="discover" style="background-image: url('<?php the_field('home_region_image'); ?>');">
     <img src="<?php the_field('home_region_image'); ?>" class="mobile__only discover__mobile-image">
-    <div class="container">
-      <div class="col-group col-group-center col-group-middle">
+    <div class="container noPadding">
 
 
-        <div class="col col-1-1__s col-1-3__xl discover__text-wrapper">
+
+        <div class=" discover__text-wrapper">
           <h2 class="discover__title scrollMagic__smoothSlideLeft">
             <?php the_field('home_region_title_up'); ?>
             <span class="discover__title-featured scrollMagic__smoothSlideLeft">
@@ -154,9 +150,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
             <?php $link = get_field("home_region_link"); ?>
             <a class="btn btn__gold btn-discover btn__big scrollMagic__bigSlideUp" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
           <?php endif; ?>
-        </div>
-        <div class="col  col-0-1__s col-2-3__xl discover__img-wrapper">
-        </div>
+
       </div>
     </div>
   </div>

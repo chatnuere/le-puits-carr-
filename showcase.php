@@ -21,31 +21,17 @@ $the_query = new WP_Query($args);
 
 <? if ($the_query->have_posts()) : ?>
   <? while ($the_query->have_posts()) : $the_query->the_post(); ?>
-    <?php $color = get_field('showcase_detail_color'); ?>
-    <section class="top_section top_section--room" style="background-image: url('<?php the_field('showcase_detail_background'); ?>')">
-      <div class="mobile_logo">
-        <div class="logo">
-          <div class="icon-lpc__logo logo__icon"></div>
-          <h2 class="logo__title"><?php ot_get_option('titre_logo'); ?></h2>
-          <h3 class="logo__subtitle"><?php echo ot_get_option('sous_titre_logo'); ?></h3>
-        </div>
-      </div>
-    </section>
 
-    <div class="intro intro--room intro--room-voutes ">
-      <div class="container container--small center">
-        <h1 class="intro--title scrollMagic__introSlideup" style="background-color: <?php echo $color; ?>;">
-          <?php the_field('showcase_detail_intro_title'); ?>
-        </h1>
-      </div>
-      <div class="intro--text" style="background-color: <?php echo $color; ?>;">
-        <div class="container container--small center">
-          <p class="scrollMagic__smoothSlideUp">
-            <?php the_field('showcase_detail_intro description'); ?>
-          </p>
-        </div>
-      </div>
-    </div>
+    <?php
+      set_query_var('intro_section_image', get_field('showcase_detail_background'));
+      set_query_var('intro_section_class', 'top_section--room');
+      set_query_var( 'template_main_title', get_field('showcase_detail_intro_title'));
+      set_query_var( 'template_main_desc', get_field('showcase_detail_intro description'));
+      set_query_var( 'color', get_field('showcase_detail_color'));
+      set_query_var( 'show_intro', true);
+      get_template_part('partials/top_section');
+    ?>
+
     <?php if (get_field('showcase_detail_modules')): ?>
 
       <?php
@@ -120,7 +106,9 @@ $the_query = new WP_Query($args);
         <section class="simpleSlider">
           <div class="simpleSlider--itemWrapper">
             <?php while (has_sub_field('showcase_detail_carrousel')): ?>
-              <img src="<?php the_sub_field('showcase_detail_carrousel_image'); ?>" class="simpleSlider--item">
+              <a href="<?php the_sub_field('showcase_detail_carrousel_image'); ?>" class="simpleSlider--item galleryItem">
+              <img src="<?php the_sub_field('showcase_detail_carrousel_image'); ?>" >
+              </a>
             <?php endwhile; ?>
           </div>
           <a href="javascript:void(0);" class="simpleSlider--prev simpleSlider--action"><i class="icon-arrow-left"></i></a>
@@ -175,7 +163,8 @@ $the_query = new WP_Query($args);
                       <i><?php the_sub_field('showcase_detail_pricing_season_subtitle'); ?></i>
                     </div>
                     <h3 class="prices--number scrollMagic__smoothSlideRight">
-                      <?php the_sub_field('showcase_detail_pricing_season_price'); ?><span class="prices--currency"><?php the_field('showcase_detail_pricing_currency'); ?></span>
+                      <?php the_sub_field('showcase_detail_pricing_season_price'); ?>
+                      <span class="prices--currency"><?php the_field('showcase_detail_pricing_currency'); ?></span>
                     </h3>
                   </div>
                 <?php endwhile; ?>

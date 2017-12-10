@@ -6,34 +6,17 @@
  *  and can be used as a home page, in which case the title will not show up.
  *
  */
-get_header(); // This fxn gets the header.php file and renders it ?>
+get_header(); // This fxn gets the header.php file and renders it
 
-  <section class="top_section top_section--room" style="background-image: url('<?php the_field('region_background'); ?>')">
-    <div class="mobile_logo">
-      <div class="logo">
-        <div class="icon-lpc__logo logo__icon"></div>
-        <h2 class="logo__title"><?php ot_get_option('titre_logo'); ?></h2>
-        <h3 class="logo__subtitle"><?php echo ot_get_option('sous_titre_logo'); ?></h3>
-      </div>
-    </div>
-  </section>
+set_query_var('intro_section_image', get_field('region_background'));
+set_query_var('intro_section_class', 'top_section--room');
+set_query_var('template_main_title', get_field('region_intro_title'));
+set_query_var('template_main_desc', get_field('region_intro_description'));
+set_query_var('color', get_field('region_color'));
+set_query_var('show_intro', true);
+get_template_part('partials/top_section');
+?>
 
-<?php $color = get_field('region_color'); ?>
-
-  <div class="intro intro--room intro--room-voutes ">
-    <div class="container container--small center">
-      <h1 class="intro--title scrollMagic__introSlideup" style="background-color: <?php echo $color; ?>;">
-        <?php the_field('region_intro_title'); ?>
-      </h1>
-    </div>
-    <div class="intro--text" style="background-color: <?php echo $color; ?>;">
-      <div class="container container--small center">
-        <p class="scrollMagic__smoothSlideUp">
-          <?php the_field('region_intro_description description'); ?>
-        </p>
-      </div>
-    </div>
-  </div>
 
 <?php if (get_field('region_show_activity_slider')): ?>
   <?php if (get_field('region_activity_slider')): ?>
@@ -149,11 +132,11 @@ get_header(); // This fxn gets the header.php file and renders it ?>
               if (get_field('selection_is_link')) {
                 $link_object = get_field("selection_link");
                 $link = $link_object['url'];
-                $target = 'target="' .$link_object['target'] .'"';
-                $css_class= '';
+                $target = 'target="' . $link_object['target'] . '"';
+                $css_class = '';
               } else {
-                $link = '#selectionPopup'.$row;
-                $css_class= 'open-popup-link';
+                $link = '#selectionPopup' . $row;
+                $css_class = 'open-popup-link';
                 $target = '';
               }
               ?>
@@ -161,8 +144,11 @@ get_header(); // This fxn gets the header.php file and renders it ?>
                 <div class="selection--item--component component--icon">
                   <?php if (get_field('selection_icon_type') == 'icomoon'): ?>
                     <i class="icon-<?php the_field('selection_icomoon_icon'); ?> "></i>
-                  <? else: ?>
+                  <? elseif (get_field('selection_icon_type') == 'other'): ?>
                     <i class="fa <?php the_field('selection_font_awesome_icon'); ?> "></i>
+                    <? else: ?>
+                    <div class="imageIcon" style="background-image: url('<?php the_field('selection_image') ?>')"></div>
+
                   <? endif; ?>
                 </div>
                 <div class="selection--item--component">

@@ -3,4 +3,8 @@
   .mobile_logo {
     display: block;
   }
+
+  .top_section--img {
+    height: calc(100vh - #{em(20px)});
+  }
 }

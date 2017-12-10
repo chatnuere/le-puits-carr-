@@ -13,29 +13,15 @@ get_header(); // This fxn gets the header.php file and renders it ?>
   // If we have a post to show, start a loop that will display it
   ?>
 
-  <section class="top_section top_section--room" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
-    <div class="mobile_logo">
-      <div class="logo">
-        <div class="icon-lpc__logo logo__icon"></div>
-        <h2 class="logo__title"><?php ot_get_option('titre_logo'); ?></h2>
-        <h3 class="logo__subtitle"><?php echo ot_get_option('sous_titre_logo'); ?></h3>
-      </div>
-    </div>
-  </section>
-
-  <div class="intro intro--room intro--region ">
-    <div class="container container--small center">
-      <h1 class="intro--title scrollMagic__introSlideup">
-        <?php the_title(); ?>
-      </h1>
-    </div>
-    <div class="intro--text">
-      <div class="container container--small center">
-        <p class="scrollMagic__smoothSlideUp">
-        </p>
-      </div>
-    </div>
-  </div>
+  <?php
+  set_query_var('intro_section_image', get_the_post_thumbnail_url());
+  set_query_var('intro_section_class', 'top_section--room');
+  set_query_var( 'template_main_title', get_the_title());
+  set_query_var( 'template_main_desc', '');
+  set_query_var( 'color', '#908b8f');
+  set_query_var( 'show_intro', true);
+  get_template_part('partials/top_section');
+  ?>
 
   <article class="post container">
 
