@@ -24,10 +24,14 @@
   text-align: center;
   position: absolute;
   bottom: 0px;
-  width: 100%;
+  width: 74%!important;
+  left: 50%;
+  transform: translate(-50%, 0);
+
 }
 
 .intro--text {
+  margin-top: -2px;
   font-size: em(18px, 16px);
   padding: em(40px, 18px) 0;
   font-family: $garamond;

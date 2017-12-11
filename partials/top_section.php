@@ -12,7 +12,7 @@
       <i class="icon-scroll"></i>
     </div>
     <?php if ($show_intro): ?>
-      <div class="container container--small center mobile__only mobile_intro--title">
+      <div class="container container--small center mobile__only mobile_intro--title" style="background-color: <?php echo $color; ?>;">
         <h1 class="intro--title" style="background-color: <?php echo $color; ?>;">
           <?php echo $template_main_title; ?>
         </h1>
@@ -30,7 +30,7 @@
     }
     ?>
   <div class="intro intro--room intro--room-voutes <?php echo $scrollClass; ?>">
-    <div class="container container--small center desktop__only">
+    <div class="container container--small center desktop__only" style="background-color: <?php echo $color; ?>;">
       <h1 class="intro--title" style="background-color: <?php echo $color; ?>;">
         <?php echo $template_main_title; ?>
       </h1>

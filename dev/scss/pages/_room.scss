@@ -57,3 +57,9 @@
   display: inline-block;
   margin-left: em(5px, 31px);
 }
+
+.galleryItem.simpleSlider--item {
+  img {
+    width: 100%;
+  }
+}
