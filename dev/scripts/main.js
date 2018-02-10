@@ -99,12 +99,14 @@
     });
 
 //dropdown list
+    /*
     $('body').click(function() {
       if($('.custom-select .drop-down-list').is(':visible')) {
         $('.custom-select').parent().removeClass('focus');
       }
       $('.custom-select .drop-down-list:visible').scrollMagic__smoothSlideUp();
     });
+    */
     $('.custom-select .active-list').click(function() {
       $(this).parent().parent().addClass('focus');
       $(this).parent().find('.drop-down-list').stop(true, true).delay(10).slideToggle(300);
@@ -149,9 +151,7 @@
     }
 
     if($("#map").length > 0) {
-      console.log('titi')
       $('body').on('googlemapapiloaded', function() {
-        console.log('toto')
         initMap();
         $(marker).click()
       })
@@ -208,7 +208,6 @@
       });
 
     }
-
 
     $(".menu__panel .menu-item").each(function(index){
       var s = 0.2

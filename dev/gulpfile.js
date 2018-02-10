@@ -28,7 +28,6 @@ gulp.task('css', function() {
 // Tâche "scripts" = concaténation de tous les scripts en un fichier dans un ordre précis
 gulp.task('scripts', function() {
   return gulp.src([
-    destination + '/scripts/lib/jquery-3.2.1.min.js',
     destination + '/scripts/lib/TweenMax-1.20.2.min.js',
     destination + '/scripts/lib/ScrollMagic.min.js',
     destination + '/scripts/lib/jquery.ScrollMagic.min.js',

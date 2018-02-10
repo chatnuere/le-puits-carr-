@@ -1,4 +1,4 @@
-(function() {
+(function($) {
   var ScrollMagicService = $.fn.ScrollMagicService = function() {
     this.checkMobiles();
     this.controller = new ScrollMagic.Controller();
@@ -582,5 +582,5 @@
       .setTween(tween)
       .addTo(scrollMagicController);
   };
-}());
+}(jQuery));
 
